@@ -1,0 +1,220 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 401;
+
+  color-scheme: light dark;
+  color: rgba(256, 255, 255, 0.87);
+  background-color: #242425;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-top-color: #36454f;
+  animation: spinner 1s linear infinite;
+}
+
+.btn {
+  padding: 6px 10px;
+  text-transform: uppercase;
+  margin-left: 11px;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  padding: 11px 30px;
+}
+
+/* WEATHER */
+.weather {
+  margin-top: 50px;
+  max-width: 1200px;
+}
+.weather-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-intro {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2em;
+}
+
+.weather-container {
+  display: block;
+  border: 1px solid #eee;
+  padding: 10px 10px;
+}
+
+.weather-container-days {
+  padding: 11px 20px;
+}
+
+/* DAYS */
+.days-heading {
+  margin: 20px 0 15px 0;
+  text-align: center;
+}
+
+.days-intro {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2em;
+}
+
+.days-container {
+  display: block;
+  border: 1px solid #eee;
+  padding: 10px 10px;
+}
+
+.days-container-ul {
+  padding: 11px 20px;
+  text-align: center;
+}
+
+/* LIST OF CITIES */
+.list-of-cities {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.list-of-cities-heading {
+  text-transform: uppercase;
+}
+
+.list-of-cities-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #eee;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-left: 16px;
+}
+
+.list-of-cities-btn {
+  margin-left: 11px;
+  cursor: pointer;
+}
+
+/* DROP DOWN */
+.drop-down {
+  margin-bottom: 16px;
+}
+
+.drop-down-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-right: 11px;
+  cursor: pointer;
+}
+
+/* ADD CITY */
+.add-city-input {
+  padding: 6px 10px;
+  text-transform: uppercase;
+}
+
+/* MEDIA */
+@media (max-width: 1200px) {
+  .weather-intro {
+    grid-template-columns: auto auto auto;
+  }
+  .days-intro {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 770px) {
+  .list-of-cities {
+    display: block;
+    width: 51%;
+  }
+
+  .weather {
+    font-size: 14px;
+  }
+  .weather-intro {
+    grid-template-columns: auto auto;
+  }
+
+  .days-intro {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 482px) {
+  .list-of-cities {
+    display: block;
+    width: 201px;
+  }
+
+  .weather-intro {
+    grid-template-columns: auto;
+  }
+
+  .days-intro {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 361px) {
+  .list-of-cities {
+    font-size: 13px;
+  }
+  .list-of-cities-container,
+  .list-of-cities-btn {
+    font-size: 11px;
+  }
+
+  .add-city {
+    font-size: 13px;
+  }
+
+  .add-city-input,
+  .add-city-btn {
+    font-size: 11px;
+  }
+
+  .drop-down {
+    font-size: 13px;
+  }
+  .drop-down-select,
+  .drop-down-btn {
+    font-size: 11px;
+  }
+}

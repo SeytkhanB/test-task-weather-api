@@ -54,7 +54,7 @@ export const reducer = (state, action) => {
       const toDeleteCity = action.payload;
       const newCities = state.cities.filter((city) => city !== toDeleteCity);
       if (newCities.length === 0) {
-        return { ...state, city: "ALMATY", cities: newCities };
+        return { ...state, city: "", cities: newCities };
       }
       return { ...state, city: newCities[0], cities: newCities };
     }
